@@ -1,4 +1,4 @@
-## Singleton Example - ShelBot Configuration
+## Singleton Example - Sheldon's Immutable Living Preferences
 
 ### Prologue
 Life at 2311 North Robles Avenue is never simple, especially when Sheldon Cooper's "predictable perfection" faces even a hint of disturbance. After a particularly heated argument about thermostat settings, furniture arrangement, and meal selection, Leonard decided to codify Sheldon's living preferences into a system everyone could refer to.
