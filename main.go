@@ -7,7 +7,6 @@ import (
 
 var once sync.Once
 
-// Singleton is a struct that will have only one instance
 type SingletonConfiguration struct {
 	Spot                    string
 	FavoriteDrink           string
@@ -17,7 +16,6 @@ type SingletonConfiguration struct {
 
 var instance *SingletonConfiguration
 
-// GetInstance is a function that will return the instance of Singleton
 func GetInstance() *SingletonConfiguration {
 	if instance == nil {
 		once.Do(
