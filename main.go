@@ -8,22 +8,38 @@ import (
 var once sync.Once
 
 // Singleton is a struct that will have only one instance
-type Singleton struct {
+type SingletonConfiguration struct {
+	Spot                    string
+	FavoriteDrink           string
+	FavoriteMeal            string
+	TemperatureInFahrenheit int
 }
 
-var instance *Singleton
+var instance *SingletonConfiguration
 
 // GetInstance is a function that will return the instance of Singleton
-func GetInstance() *Singleton {
+func GetInstance() *SingletonConfiguration {
 	if instance == nil {
 		once.Do(
 			func() {
-				instance = &Singleton{}
-				fmt.Println("Created instance of Singleton")
+				instance = &SingletonConfiguration{
+					Spot:                    "Sheldon's spot on the couch",
+					FavoriteDrink:           "Diet Virgin Cuba Libre",
+					FavoriteMeal:            "Spaghetti with little pieces of hot dog cut up in it",
+					TemperatureInFahrenheit: 72,
+				}
+
+				fmt.Println("Created instance of SingletonConfiguration")
+				fmt.Println("--------------------")
+				fmt.Println("Spot: ", instance.Spot)
+				fmt.Println("FavoriteDrink: ", instance.FavoriteDrink)
+				fmt.Println("FavoriteMeal: ", instance.FavoriteMeal)
+				fmt.Println("TemperatureInFahrenheit: ", instance.TemperatureInFahrenheit)
+				fmt.Println("--------------------")
 			},
 		)
 	} else {
-		fmt.Println("Instance of Singleton already exists")
+		fmt.Println("Instance of SingletonConfiguration already exists")
 	}
 
 	return instance
