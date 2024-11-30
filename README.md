@@ -9,9 +9,9 @@ In this example, we want to create ShelBot, and we need some configuration for t
 ### Solution
 The `SingletonConfiguration` struct holds the configuration details for ShelBot:
 
-`Spot`: Sheldon's spot on the couch
-`FavoriteDrink`: Diet Virgin Cuba Libre
-`FavoriteMeal`: Spaghetti with little pieces of hot dog cut up in it
-`TemperatureInFahrenheit`: 72
+- `Spot`: Sheldon's spot on the couch
+- `FavoriteDrink`: Diet Virgin Cuba Libre
+- `FavoriteMeal`: Spaghetti with little pieces of hot dog cut up in it
+- `TemperatureInFahrenheit`: 72
 
 The `GetInstance` function returns the instance of `SingletonConfiguration`. It uses the `sync.Once` type to ensure that the configuration is initialized only once.
